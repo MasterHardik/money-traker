@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     // Extract values from the form
+    const userId = "5f3e3d9f4d2d4a4567890123";
     const type = document.getElementById("type").value;
     const amount = document.getElementById("amount").value;
     const date = document.getElementById("date").value;
     const note = document.getElementById("note").value;
-    // Update the dashboard with the new entry
     updateDashboard(type, amount, date, note);
     // Prepare the formData object
     const formData = { type, amount, date, note };
@@ -25,15 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const data = await response.json();
-
-      // Log the server's response
       console.log(data);
-
-      // Optionally, alert the user or clear the form fields
-      // alert('Entry added successfully!');
-      // form.reset();
     } catch (error) {
-      // Log any errors to the console
       console.error("Error:", error);
     }
   });

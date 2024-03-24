@@ -20,61 +20,61 @@ const ConnectDB = async () => {
 // Call ConnectDB to initiate the connection
 ConnectDB();
 
-// Define the schema
-const memberSchema = new mongoose.Schema({
-  Members: [
-    {
-      Username: {
-        type: String,
-        required: true,
-      },
-      Password: {
-        type: String,
-        required: true,
-      },
-      Email: {
-        type: String,
-        required: true,
-      },
-      PhoneNumber: {
-        type: String,
-        required: true,
-      },
-      Expense: [
-        {
-          Amount: {
-            type: Number,
-            required: true,
-          },
-          Date: {
-            type: Date,
-            required: true,
-          },
-          Note: {
-            type: String,
-          },
-        },
-      ],
-      Earned: [
-        {
-          Amount: {
-            type: Number,
-            required: true,
-          },
-          Date: {
-            type: Date,
-            required: true,
-          },
-          Note: {
-            type: String,
-          },
-        },
-      ],
-    },
-  ],
-});
+// // Define the schema
+// const memberSchema = new mongoose.Schema({
+//   Members: [
+//     {
+//       Username: {
+//         type: String,
+//         required: true,
+//       },
+//       Password: {
+//         type: String,
+//         required: true,
+//       },
+//       Email: {
+//         type: String,
+//         required: true,
+//       },
+//       PhoneNumber: {
+//         type: String,
+//         required: true,
+//       },
+//       Expense: [
+//         {
+//           Amount: {
+//             type: Number,
+//             required: true,
+//           },
+//           Date: {
+//             type: Date,
+//             required: true,
+//           },
+//           Note: {
+//             type: String,
+//           },
+//         },
+//       ],
+//       Earned: [
+//         {
+//           Amount: {
+//             type: Number,
+//             required: true,
+//           },
+//           Date: {
+//             type: Date,
+//             required: true,
+//           },
+//           Note: {
+//             type: String,
+//           },
+//         },
+//       ],
+//     },
+//   ],
+// });
 
-// Pre-save hook to hash passwords
+// // Pre-save hook to hash passwords
 // memberSchema.pre("save", async function (next) {
 //   if (this.isModified("Members")) {
 //     for (let member of this.Members) {
@@ -87,7 +87,7 @@ const memberSchema = new mongoose.Schema({
 //   next();
 // });
 
-// Create the model
-const Account = mongoose.model("Account", memberSchema);
+// // Create the model
+// const Account = mongoose.model("Account", memberSchema);
 
-module.exports = Account; // Export the model if you need to use it in other parts of your application
+// module.exports = Account; // Export the model if you need to use it in other parts of your application
