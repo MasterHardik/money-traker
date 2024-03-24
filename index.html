@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Money Tracker WebApp</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Money Tracker WebApp</h1>
+
+      <!-- Expense Entry Form -->
+      <section id="entry-form">
+        <h2>Track Your Money</h2>
+        <form id="money-form">
+          <div class="form-group">
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+              <option value="expense">Expense</option>
+              <option value="earned">Earned</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required />
+          </div>
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="note">Note:</label>
+            <textarea id="note" name="note"></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <!-- Dashboard for Displaying Expenses and Earnings -->
+      <section id="dashboard">
+        <h2>Dashboard</h2>
+        <div id="expenses">
+          <h3>Expenses</h3>
+          <ul>
+            <!-- Dynamically generated list items will go here -->
+          </ul>
+        </div>
+        <div id="earnings">
+          <h3>Earnings</h3>
+          <ul>
+            <!-- Dynamically generated list items will go here -->
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+    <!-- Link to your JavaScript file -->
+    <script src="./index.js"></script>
+  </body>
+</html>

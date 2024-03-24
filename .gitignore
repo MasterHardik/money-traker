@@ -1,0 +1,5 @@
+#exclude credentials
+.env
+
+#exclude node modules
+node_modules
